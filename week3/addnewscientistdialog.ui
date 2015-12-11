@@ -42,7 +42,7 @@
     <string>name</string>
    </property>
   </widget>
-  <widget class="QDateEdit" name="set_birthday">
+  <widget class="QDateEdit" name="set_birthYear">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -51,15 +51,77 @@
      <height>22</height>
     </rect>
    </property>
+   <property name="displayFormat">
+    <string>yyyy</string>
+   </property>
+   <property name="date">
+    <date>
+     <year>1950</year>
+     <month>1</month>
+     <day>1</day>
+    </date>
+   </property>
   </widget>
-  <widget class="QDateEdit" name="set_day_of_death">
+  <widget class="QDateEdit" name="set_deathYear">
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>140</y>
+     <y>170</y>
      <width>110</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="wrapping">
+    <bool>false</bool>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="displayFormat">
+    <string>yyyy</string>
+   </property>
+   <property name="calendarPopup">
+    <bool>false</bool>
+   </property>
+   <property name="date">
+    <date>
+     <year>2000</year>
+     <month>1</month>
+     <day>1</day>
+    </date>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Set_sex">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>70</y>
+     <width>69</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>male</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>female</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>140</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dead?</string>
    </property>
   </widget>
  </widget>

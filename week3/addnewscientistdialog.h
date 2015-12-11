@@ -1,7 +1,9 @@
 #ifndef ADDNEWSCIENTISTDIALOG_H
 #define ADDNEWSCIENTISTDIALOG_H
 #include "services/scientistservice.h"
+#include "models/scientist.h"
 #include <QDialog>
+#include <string>
 
 namespace Ui {
 class AddNewScientistDialog;
@@ -18,10 +20,11 @@ public:
 private slots:
     void on_buttonBox_accepted();
 
+    void on_checkBox_toggled(bool checked);
+
 private:
     Ui::AddNewScientistDialog *ui;
-
-
+    sexType castToSex(int cast);
     ScientistService sciServ;
 };
 

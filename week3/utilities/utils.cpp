@@ -108,4 +108,18 @@ namespace utils {
 
         return db;
     }
+
+    std::string sexToString(sexType sex)
+    {
+        if(sex == female)
+        {
+            return "female";
+        }
+        if(sex == male)
+        {
+            return "male";
+        }
+        return "male";
+    }
+
 }

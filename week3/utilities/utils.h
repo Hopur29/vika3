@@ -7,8 +7,8 @@
 #include <string>
 #include <QtSql>
 
-#include "scientist.h"
-#include "computer.h"
+#include "models/scientist.h"
+#include "models/computer.h"
 
 /**
  * This file contains reusable utility functions used throughout the application
@@ -28,6 +28,8 @@ namespace utils {
     enum computerType intToComputerType(int number);
 
     enum sexType stringToSex(std::string str);
+
+    std::string sexToString(enum sexType sex);
 
     QSqlDatabase getDatabaseConnection();
 }

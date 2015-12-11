@@ -92,12 +92,12 @@ bool Scientist::contains(string searchTerm)
         return true;
     }
 
-    if (searchTermLower == "male" && sex == sexType::male)
+    if (searchTermLower == "male" && sex == male)
     {
         return true;
     }
 
-    if (searchTermLower == "female" && sex == sexType::female)
+    if (searchTermLower == "female" && sex == female)
     {
         return true;
     }

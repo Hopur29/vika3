@@ -182,3 +182,19 @@ void MainWindow::on_Computer_edit_clicked()
         displayComputers();
     }
 }
+
+void MainWindow::on_removeComputer_clicked()
+{
+    int currentlySelectedComputerIndex = ui->Computer_table->currentIndex().row();
+
+    Computer com = currentlyDisplayedComputer.at(currentlySelectedComputerIndex);
+
+    if(comServ.removeComputer(com))
+    {
+        displayComputers();
+    }
+    else
+    {
+        QMessageBox::information(this,tr("Error"), tr("We were not able to remove this scientist, sorry"));
+    }
+}

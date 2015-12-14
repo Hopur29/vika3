@@ -8,7 +8,20 @@ ComputerRepository::ComputerRepository()
 {
     db = utils::getDatabaseConnection();
 }
+bool ComputerRepository::removeComputer(Computer computer)
+{
+    db.open();
 
+    QSqlQuery query(db);
+
+    stringstream sqlQuery;
+    sqlQuery << "DELETE FROM Computers WHERE id = " << computer.getId();
+
+    bool success = query.exec(QString::fromStdString(sqlQuery.str()));
+
+    db.close();
+    return success;
+}
 vector<Computer> ComputerRepository::queryComputers(QString sqlQuery)
 {
     vector<Computer> computers;

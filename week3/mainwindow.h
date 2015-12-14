@@ -40,6 +40,8 @@ private slots:
 
     void on_Computer_edit_clicked();
 
+    void on_removeComputer_clicked();
+
 private:
     Ui::MainWindow *ui;
     void displayScientists();

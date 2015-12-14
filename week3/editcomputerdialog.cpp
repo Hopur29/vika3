@@ -48,7 +48,7 @@ void editcomputerdialog::on_buttonBox_accepted()
 
     if(ui->dateEdit->isHidden())
     {
-        if(!compServ.editComputer(Computer(name.toStdString(), utils::intToComputerType(type), id))
+        if(!compServ.editComputer(Computer(name.toStdString(), utils::intToComputerType(type)), id))
         {
             QMessageBox::information(this,tr("Error"), tr("error editing"));
         }
@@ -56,7 +56,7 @@ void editcomputerdialog::on_buttonBox_accepted()
 
     else
     {
-        if(!compServ.editComputer(Computer(name.toStdString(), utils::intToComputerType(type), byear.toUInt(), id))
+        if(!compServ.editComputer(Computer(name.toStdString(), utils::intToComputerType(type), byear.toUInt()), id))
         {
             QMessageBox::information(this,tr("Error"), tr("error editing"));
         }

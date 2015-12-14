@@ -51,5 +51,3 @@ void adnewcomputerdialog::on_addOK_accepted()
     }
 
 }
-
-

@@ -22,6 +22,8 @@ private slots:
 
     void on_checkBox_toggled(bool checked);
 
+    void on_Name_Edit_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::EditScientistDialog *ui;
     ScientistService sciServ;

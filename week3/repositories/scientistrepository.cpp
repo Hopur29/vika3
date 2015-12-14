@@ -104,6 +104,49 @@ bool ScientistRepository::addScientist(Scientist scientist)
     return true;
 }
 
+bool ScientistRepository::removeScientist(Scientist scientist)
+{
+    db.open();
+
+    QSqlQuery query(db);
+
+    stringstream sqlQuery;
+    sqlQuery << "DELETE FROM Scientists WHERE id = " << scientist.getId();
+
+    bool success = query.exec(QString::fromStdString(sqlQuery.str()));
+
+    db.close();
+    return success;
+}
+
+bool ScientistRepository::editScientist(Scientist scientist, int id)
+{
+    db.open();
+
+    if (!db.isOpen())
+    {
+        return false;
+    }
+
+    QSqlQuery query(db);
+
+    stringstream sqlQuery;
+    sqlQuery << "UPDATE Scientists SET name='" << scientist.getName();
+    sqlQuery << "', sex='" << scientist.getSex();
+    sqlQuery << "', yearBorn='" << scientist.getYearBorn();
+    sqlQuery << "', yearDied='" << scientist.getYearDied();
+    sqlQuery << "' WHERE id=" << id;
+
+    if (!query.exec(QString::fromStdString(sqlQuery.str())))
+    {
+        return false;
+    }
+
+    db.close();
+
+    return true;
+}
+
 std::vector<Computer> ScientistRepository::queryComputersByScientist(Scientist scientist)
 {
     vector<Computer> computers;

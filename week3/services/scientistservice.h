@@ -1,7 +1,7 @@
 #ifndef SCIENTISTSERVICE_H
 #define SCIENTISTSERVICE_H
 
-#include "scientistrepository.h"
+#include "repositories/scientistrepository.h"
 
 /**
  * @brief The ScientistService acts as a middle layer between the UI and Data layers
@@ -33,6 +33,9 @@ public:
      * @return true if it was a success, false if it was a failure
      */
     bool addScientist(Scientist scientist);
+
+    bool editScientist(Scientist scientist, int id);
+    bool removeScientist(Scientist scientist);
 private:
     ScientistRepository scientistRepo;
 };

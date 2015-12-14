@@ -3,7 +3,7 @@
 # Project created by QtCreator 2015-12-10T11:29:22
 #
 #-------------------------------------------------
-
+QT       += core sql
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -22,7 +22,10 @@ SOURCES += main.cpp\
     services/computerservice.cpp \
     services/linkservice.cpp \
     services/scientistservice.cpp \
-    utilities/utils.cpp
+    utilities/utils.cpp \
+    addnewscientistdialog.cpp \
+    adnewcomputerdialog.cpp \
+    editscientistdialog.cpp
 
 HEADERS  += mainwindow.h \
     models/computer.h \
@@ -34,6 +37,12 @@ HEADERS  += mainwindow.h \
     services/linkservice.h \
     services/scientistservice.h \
     utilities/constants.h \
-    utilities/utils.h
+    utilities/utils.h \
+    addnewscientistdialog.h \
+    adnewcomputerdialog.h \
+    editscientistdialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    addnewscientistdialog.ui \
+    adnewcomputerdialog.ui \
+    editscientistdialog.ui

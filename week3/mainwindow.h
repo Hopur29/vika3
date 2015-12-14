@@ -5,6 +5,7 @@
 #include "services/scientistservice.h"
 #include "addnewscientistdialog.h"
 #include "adnewcomputerdialog.h"
+#include "editscientistdialog.h"
 #include <QMainWindow>
 #include <QTableWidget>
 
@@ -27,9 +28,14 @@ private slots:
 
     void on_tab_tabBarClicked(int index);
 
+    void on_Scientist_Edit_clicked();
+
+    void on_SearchScientist_textChanged(const QString &arg1);
+
+    void on_removeScientist_clicked();
+
 private:
     Ui::MainWindow *ui;
-    void addNewScientist();
     void displayScientists();
     void displayScientists(std::vector<Scientist> vec);
     ScientistService sciServ;

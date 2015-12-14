@@ -25,12 +25,12 @@ void AddNewScientistDialog::on_buttonBox_accepted()
 
     if(name.isEmpty())
     {
-        //error handling
+
     }
     if(bday.isEmpty())
     {
         //do something
-    }
+    }   
 
     if(ui->set_deathYear->isHidden())
     {
@@ -54,7 +54,6 @@ void AddNewScientistDialog::on_buttonBox_accepted()
             QMessageBox::information(this,tr("Error"), tr("We were not able to add this scientist, sorry"));
         }
     }
-
 }
 
 void AddNewScientistDialog::on_checkBox_toggled(bool checked)

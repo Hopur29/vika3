@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AddNewScientistDialog</class>
- <widget class="QDialog" name="AddNewScientistDialog">
+ <class>EditScientistDialog</class>
+ <widget class="QDialog" name="EditScientistDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -29,99 +29,73 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="Set_name">
+  <widget class="QComboBox" name="comboBox">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>60</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>name</string>
-   </property>
-  </widget>
-  <widget class="QDateEdit" name="set_birthYear">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>100</y>
-     <width>110</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="displayFormat">
-    <string>yyyy</string>
-   </property>
-   <property name="date">
-    <date>
-     <year>1950</year>
-     <month>1</month>
-     <day>1</day>
-    </date>
-   </property>
-  </widget>
-  <widget class="QDateEdit" name="set_deathYear">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>170</y>
-     <width>110</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="wrapping">
-    <bool>false</bool>
-   </property>
-   <property name="readOnly">
-    <bool>false</bool>
-   </property>
-   <property name="displayFormat">
-    <string>yyyy</string>
-   </property>
-   <property name="calendarPopup">
-    <bool>false</bool>
-   </property>
-   <property name="date">
-    <date>
-     <year>2000</year>
-     <month>1</month>
-     <day>1</day>
-    </date>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="Set_sex">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>70</y>
+     <x>260</x>
+     <y>110</y>
      <width>69</width>
      <height>22</height>
     </rect>
    </property>
    <item>
     <property name="text">
-     <string>female</string>
+     <string>Female</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>male</string>
+     <string>Male</string>
     </property>
    </item>
+  </widget>
+  <widget class="QLineEdit" name="Name_Edit">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>90</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="Birth_Year_Edit">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>130</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="displayFormat">
+    <string>yyyy</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="Death_Year_Edit">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>190</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="displayFormat">
+    <string>yyyy</string>
+   </property>
   </widget>
   <widget class="QCheckBox" name="checkBox">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>140</y>
+     <x>110</x>
+     <y>160</y>
      <width>70</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>Dead?</string>
+    <string>dead?</string>
    </property>
   </widget>
  </widget>
@@ -130,7 +104,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>AddNewScientistDialog</receiver>
+   <receiver>EditScientistDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -146,7 +120,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>AddNewScientistDialog</receiver>
+   <receiver>EditScientistDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

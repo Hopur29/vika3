@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 
-#include "scientist.h"
+#include "models/scientist.h"
 
 /**
  * @brief The ScientistRepository class handles reading and writing scientists to and from a database
@@ -35,6 +35,9 @@ public:
      */
     bool addScientist(Scientist scientist);
 
+    bool editScientist(Scientist scientist, int id);
+
+    bool removeScientist(Scientist scientist);
 private:
 
     /**

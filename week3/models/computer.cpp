@@ -54,15 +54,15 @@ enum computerType Computer::getType()
 
 string Computer::getTypeName()
 {
-    if (type == computerType::electronic)
+    if (type == electronic)
     {
         return "Electronic";
     }
-    else if (type == computerType::mechatronic)
+    else if (type == mechatronic)
     {
         return "Mechatronic";
     }
-    else if (type == computerType::transistor)
+    else if (type == transistor)
     {
         return "Transistor";
     }

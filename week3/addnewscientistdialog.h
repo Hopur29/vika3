@@ -3,6 +3,7 @@
 #include "services/scientistservice.h"
 #include "models/scientist.h"
 #include <QDialog>
+#include "mainwindow.h"
 #include <string>
 
 namespace Ui {

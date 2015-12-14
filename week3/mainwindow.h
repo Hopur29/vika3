@@ -34,12 +34,22 @@ private slots:
 
     void on_removeScientist_clicked();
 
+
+
+    void on_pushButton_clicked();
+
+    void on_Computer_edit_clicked();
+
 private:
     Ui::MainWindow *ui;
     void displayScientists();
     void displayScientists(std::vector<Scientist> vec);
+    void displayComputers();
+    void displayComputers(std::vector<Computer> vec);
     ScientistService sciServ;
+    ComputerService comServ;
     std::vector<Scientist> currentlyDisplayedScientist;
+    std::vector<Computer> currentlyDisplayedComputer;
 };
 
 #endif // MAINWINDOW_H

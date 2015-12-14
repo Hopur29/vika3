@@ -131,3 +131,29 @@ std::vector<Scientist> ComputerRepository::queryScientistsByComputer(Computer co
 
     return scientists;
 }
+bool ComputerRepository::editComputer(Computer computer, int id)
+{
+    db.open();
+
+    if (!db.isOpen())
+    {
+        return false;
+    }
+
+    QSqlQuery query(db);
+
+    stringstream sqlQuery;
+    sqlQuery << "UPDATE Computer SET name='" << computer.getName();
+    sqlQuery << "', type='" << computer.getType();
+    sqlQuery << "', yearBuilt='" << computer.getYearBuilt();
+    sqlQuery << "' WHERE id=" << id;
+
+    if (!query.exec(QString::fromStdString(sqlQuery.str())))
+    {
+        return false;
+    }
+
+    db.close();
+
+    return true;
+}

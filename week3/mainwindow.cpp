@@ -1,8 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "addnewscientistdialog.h"
+#include "adnewcomputerdialog.h"
 #include "utilities/utils.h"
+#include "models/computer.h"
 #include <QMessageBox>
+#include"editcomputerdialog.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -85,7 +88,7 @@ void MainWindow::on_tab_tabBarClicked(int index)
     }
     else if(index == 1)
     {
-        //displayComputers();
+        displayComputers();
     }
     else if(index == 2)
     {
@@ -130,5 +133,52 @@ void MainWindow::on_removeScientist_clicked()
     else
     {
         QMessageBox::information(this,tr("Error"), tr("We were not able to remove this scientist, sorry"));
+    }
+}
+
+void MainWindow::displayComputers()
+{
+    std::vector<Computer> vec = comServ.getAllComputers("name",true);
+    displayComputers(vec);
+}
+
+void MainWindow::displayComputers(std::vector<Computer> vec)
+{
+    ui->Computer_table->clearContents();
+    ui->Computer_table->setRowCount(vec.size());
+
+    for(unsigned int i = 0; i < vec.size(); i++)
+    {
+        Computer currentComputer = vec.at(i);
+
+        ui->Computer_table->setItem(i,0,new QTableWidgetItem(QString::fromStdString(currentComputer.getName())));
+        //computerType type = currentComputer.getType();
+        ui->Computer_table->setItem(i,1,new QTableWidgetItem(QString::fromStdString(currentComputer.getTypeName())));
+        ui->Computer_table->setItem(i,2,new QTableWidgetItem(QString::number(currentComputer.getYearBuilt())));
+        //ui->Computer_table->setItem(i,3,new QTableWidgetItem(QString::number(currentComputer.wasBuilt())));
+
+
+
+        ui->Computer_table->setItem(i, 4, new QTableWidgetItem(QString::number(currentComputer.getId())));
+
+        currentlyDisplayedComputer = vec;
+
+    }
+
+}
+
+void MainWindow::on_Computer_edit_clicked()
+{
+    int currentlySelectedComputerIndex = ui->Computer_table->currentIndex().row();
+    Computer currentlySelectedComputer = currentlyDisplayedComputer.at(currentlySelectedComputerIndex);
+
+    editcomputerdialog edit;
+    edit.setInstance(currentlySelectedComputer);
+    edit.setModal(true);
+    int result = edit.exec();
+
+    if(result == 1)
+    {
+        displayComputers();
     }
 }

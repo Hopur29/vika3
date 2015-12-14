@@ -22,6 +22,7 @@ class Computer
 {
 public:
     Computer();
+    ~Computer();
     Computer(std::string name, enum computerType type);
     Computer(std::string name, enum computerType type, int yearBuilt);
     Computer(unsigned int id, std::string name, enum computerType type, int yearBuilt);

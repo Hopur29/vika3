@@ -6,6 +6,10 @@
 #include "mainwindow.h"
 #include <string>
 
+/**
+ *adds new scientists to the dialog
+ */
+
 namespace Ui {
 class AddNewScientistDialog;
 }

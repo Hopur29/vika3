@@ -5,6 +5,10 @@
 #include <QMessageBox>
 #include <QDate>
 
+/**
+ *edits the Scientists and checks for errors
+ */
+
 EditScientistDialog::EditScientistDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::EditScientistDialog)

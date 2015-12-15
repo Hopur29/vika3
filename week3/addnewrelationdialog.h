@@ -9,6 +9,10 @@
 
 #include <QDialog>
 
+/**
+ *adds relation between Scientist and Computers
+ */
+
 namespace Ui {
 class addNewRelationDialog;
 }

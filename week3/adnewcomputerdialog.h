@@ -5,6 +5,10 @@
 #include "mainwindow.h"
 #include <QDialog>
 
+/**
+ *adds new computers to the dialog
+ */
+
 namespace Ui {
 class adnewcomputerdialog;
 }

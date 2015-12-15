@@ -55,6 +55,7 @@ private:
     void displayScientists(std::vector<Scientist> vec);
     void displayComputers();
     void displayComputers(std::vector<Computer> vec);
+    void displayRelations();
     ScientistService sciServ;
     ComputerService comServ;
     std::vector<Scientist> currentlyDisplayedScientist;

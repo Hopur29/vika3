@@ -14,6 +14,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     on_tab_tabBarClicked(0);
+    on_tab_tabBarClicked(1);
+    on_tab_tabBarClicked(2);
 }
 
 MainWindow::~MainWindow()
@@ -217,6 +219,12 @@ void MainWindow::on_SearchComputer_textChanged(const QString &arg1)
     std::vector<Computer> com = comServ.searchForComputers(userInput);
     displayComputers(com);
 }
+
+/*void MainWindow::displayRelations()
+{
+    ui->Relation_table->clearContents();
+    ui->Relation_tab
+}*/
 
 void MainWindow::on_addRelation_clicked()
 {

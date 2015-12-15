@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTabWidget" name="tab">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -207,6 +207,11 @@
         <string>Was built</string>
        </property>
       </column>
+      <column>
+       <property name="text">
+        <string>Id</string>
+       </property>
+      </column>
      </widget>
      <widget class="QPushButton" name="Computer_edit">
       <property name="geometry">
@@ -262,7 +267,7 @@
        <string>Add</string>
       </property>
      </widget>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="Relation_table">
       <property name="geometry">
        <rect>
         <x>0</x>

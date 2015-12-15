@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="Scientists">
      <attribute name="title">
@@ -183,6 +183,9 @@
         <width>361</width>
         <height>231</height>
        </rect>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
       </property>
       <column>
        <property name="text">

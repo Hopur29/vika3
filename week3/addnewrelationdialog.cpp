@@ -18,5 +18,5 @@ void addNewRelationDialog::on_buttonBox_accepted()
     QString scientist_id = ui->Scientist_id_spinbox->text();
     QString computer_id = ui->Computer_id_spinbox->text();
 
-    linkServ.addLink(scientist_id.toUInt(),computer_id.toUInt());
+    linkServ.addLink(scientist_id.toStdString(),computer_id.toStdString());
 }

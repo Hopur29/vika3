@@ -24,10 +24,10 @@ void adnewcomputerdialog::on_addOK_accepted()
 
     if(name.isEmpty())
     {
-        //error handling
+         QMessageBox::information(this,tr("Error"), tr("Computers must have a name."));
     }
 
-    if(yearBuilt.isEmpty())
+    else if(yearBuilt.isEmpty())
     {
         if(comServ.addComputer(Computer(name.toStdString(), utils::intToComputerType(type))))
         {

@@ -75,7 +75,7 @@ string Computer::getTypeName()
 
 bool Computer::wasBuilt()
 {
-    return yearBuilt != constants::YEAR_UNSELECTED_VALUE;
+    return yearBuilt != constants::YEAR_UNSELECTED_VALUE2;
 }
 
 std::vector<Scientist> Computer::getScientists()
@@ -122,7 +122,7 @@ bool Computer::contains(string searchTerm)
         return true;
     }
 
-    if (yearBuilt != constants::YEAR_UNSELECTED_VALUE)
+    if (yearBuilt != constants::YEAR_UNSELECTED_VALUE2)
     {
         string yearBuiltString = utils::intToString(yearBuilt);
 

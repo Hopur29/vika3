@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     addnewscientistdialog.cpp \
     adnewcomputerdialog.cpp \
     editscientistdialog.cpp \
-    editcomputerdialog.cpp
+    editcomputerdialog.cpp \
+    addnewrelationdialog.cpp
 
 HEADERS  += mainwindow.h \
     models/computer.h \
@@ -42,10 +43,12 @@ HEADERS  += mainwindow.h \
     addnewscientistdialog.h \
     adnewcomputerdialog.h \
     editscientistdialog.h \
-    editcomputerdialog.h
+    editcomputerdialog.h \
+    addnewrelationdialog.h
 
 FORMS    += mainwindow.ui \
     addnewscientistdialog.ui \
     adnewcomputerdialog.ui \
     editscientistdialog.ui \
-    editcomputerdialog.ui
+    editcomputerdialog.ui \
+    addnewrelationdialog.ui

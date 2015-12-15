@@ -10,6 +10,7 @@
 namespace constants {
     const char FILE_DELIMETER = '\t';
     const int YEAR_UNSELECTED_VALUE = 13337;
+    const int YEAR_UNSELECTED_VALUE2 = 13338;
 
     const unsigned int MENU_COMMAND_WIDTH = 15;
 

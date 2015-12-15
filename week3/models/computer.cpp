@@ -1,5 +1,6 @@
 #include "computer.h"
 #include "utilities/constants.h"
+#include "utilities/utils.h"
 
 using namespace std;
 
@@ -13,7 +14,7 @@ Computer::Computer(string name, enum computerType type)
     id = 0;
     this->name = name;
     this->type = type;
-    this->yearBuilt = constants::YEAR_UNSELECTED_VALUE;
+    this->yearBuilt = constants::YEAR_UNSELECTED_VALUE2;
 }
 
 Computer::Computer(string name, enum computerType type, int yearBuilt)
@@ -85,4 +86,58 @@ std::vector<Scientist> Computer::getScientists()
 void Computer::setScientists(std::vector<Scientist> newScientists)
 {
     scientists = newScientists;
+}
+bool Computer::contains(string searchTerm)
+{
+    string searchTermLower = utils::stringToLower(searchTerm);
+
+    string nameLower = utils::stringToLower(name);
+    if (nameLower.find(searchTermLower) != string::npos)
+    {
+        return true;
+    }
+
+    if (searchTermLower == "electronic" && type == electronic)
+    {
+        return true;
+    }
+
+    if (searchTermLower == "mechatronic" && type == mechatronic)
+    {
+        return true;
+    }
+    if (searchTermLower == "transistor" && type == transistor)
+    {
+        return true;
+    }
+    if (searchTermLower == "other" && type == other)
+    {
+        return true;
+    }
+
+    string yearBuiltString = utils::intToString(yearBuilt);
+
+    if (yearBuiltString.find(searchTerm) != string::npos)
+    {
+        return true;
+    }
+
+    if (yearBuilt != constants::YEAR_UNSELECTED_VALUE)
+    {
+        string yearBuiltString = utils::intToString(yearBuilt);
+
+        if (yearBuiltString.find(searchTerm) != string::npos)
+        {
+            return true;
+        }
+    }
+    else
+    {
+        if (searchTermLower == "Not Built")
+        {
+            return true;
+        }
+    }
+
+    return false;
 }

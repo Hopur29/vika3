@@ -44,6 +44,8 @@ private slots:
 
     //void on_SearchComputer_textChanged(const QString &arg1);
 
+    void on_SearchComputer_textChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     void displayScientists();

@@ -1,6 +1,7 @@
 #include "editcomputerdialog.h"
 #include "ui_editcomputerdialog.h"
 #include "models/computer.h"
+#include "utilities/constants.h"
 #include "utilities/utils.h"
 #include <QMessageBox>
 #include <QDate>
@@ -13,10 +14,11 @@ editcomputerdialog::editcomputerdialog(QWidget *parent) :
     ui->dateEdit->hide();
 }
 
-/*editcomputerdialog::~editcomputerdialog()
+editcomputerdialog::~editcomputerdialog()
 {
     delete ui;
-}*/
+}
+
 
 void editcomputerdialog::setInstance(Computer comp)
 {
@@ -25,7 +27,7 @@ void editcomputerdialog::setInstance(Computer comp)
     ui->dateEdit->setDate(QDate(comp.getYearBuilt(), 1, 1));
     id = comp.getId();
 
-    if(comp.getYearBuilt() == 13337)
+    if(comp.getYearBuilt() == constants::YEAR_UNSELECTED_VALUE2)
        {
            on_checkBox_toggled(false);
        }

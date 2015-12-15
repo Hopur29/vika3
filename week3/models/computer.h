@@ -34,6 +34,7 @@ public:
     int getYearBuilt();
     bool wasBuilt();
     std::vector<Scientist> getScientists();
+    bool contains(std::string searchTerm);
 
     void setScientists(std::vector<Scientist> newScientists);
 

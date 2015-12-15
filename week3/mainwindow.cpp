@@ -76,7 +76,7 @@ void MainWindow::on_addComputer_clicked()
 
     if(result == 1)
     {
-        //displayComputers();
+        displayComputers();
     }
 }
 
@@ -155,8 +155,19 @@ void MainWindow::displayComputers(std::vector<Computer> vec)
         //computerType type = currentComputer.getType();
         ui->Computer_table->setItem(i,1,new QTableWidgetItem(QString::fromStdString(currentComputer.getTypeName())));
         ui->Computer_table->setItem(i,2,new QTableWidgetItem(QString::number(currentComputer.getYearBuilt())));
-        //ui->Computer_table->setItem(i,3,new QTableWidgetItem(QString::number(currentComputer.wasBuilt())));
 
+
+        if(currentComputer.getYearBuilt() == 13338)
+        {
+            ui->Computer_table->setItem(i, 2, new QTableWidgetItem("Not Built"));
+
+        }
+        else
+        {
+            ui->Computer_table->setItem(i, 2, new QTableWidgetItem(QString::number(currentComputer.getYearBuilt())));
+            ui->Computer_table->setItem(i,3,new QTableWidgetItem(QString::number(currentComputer.wasBuilt())));
+
+        }
 
 
         ui->Computer_table->setItem(i, 4, new QTableWidgetItem(QString::number(currentComputer.getId())));
@@ -199,10 +210,10 @@ void MainWindow::on_removeComputer_clicked()
     }
 }
 
-/*void MainWindow::on_SearchComputer_textChanged(const QString &arg1)
+void MainWindow::on_SearchComputer_textChanged(const QString &arg1)
 {
     std::string userInput = arg1.toStdString();
 
     std::vector<Computer> com = comServ.searchForComputers(userInput);
     displayComputers(com);
-}*/
+}

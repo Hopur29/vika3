@@ -198,3 +198,11 @@ void MainWindow::on_removeComputer_clicked()
         QMessageBox::information(this,tr("Error"), tr("We were not able to remove this scientist, sorry"));
     }
 }
+
+/*void MainWindow::on_SearchComputer_textChanged(const QString &arg1)
+{
+    std::string userInput = arg1.toStdString();
+
+    std::vector<Computer> com = comServ.searchForComputers(userInput);
+    displayComputers(com);
+}*/

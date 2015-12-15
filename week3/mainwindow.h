@@ -36,11 +36,13 @@ private slots:
 
 
 
-    void on_pushButton_clicked();
+    //void on_pushButton_clicked();
 
     void on_Computer_edit_clicked();
 
     void on_removeComputer_clicked();
+
+    //void on_SearchComputer_textChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;

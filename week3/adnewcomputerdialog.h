@@ -2,6 +2,7 @@
 #define ADNEWCOMPUTERDIALOG_H
 
 #include "services/computerservice.h"
+#include "mainwindow.h"
 #include <QDialog>
 
 namespace Ui {

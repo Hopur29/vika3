@@ -156,10 +156,12 @@ bool ComputerRepository::editComputer(Computer computer, int id)
     QSqlQuery query(db);
 
     stringstream sqlQuery;
-    sqlQuery << "UPDATE Computer SET name='" << computer.getName();
+    sqlQuery << "UPDATE Computers SET name='" << computer.getName();
     sqlQuery << "', type='" << computer.getType();
     sqlQuery << "', yearBuilt='" << computer.getYearBuilt();
     sqlQuery << "' WHERE id=" << id;
+
+    string a = sqlQuery.str();
 
     if (!query.exec(QString::fromStdString(sqlQuery.str())))
     {

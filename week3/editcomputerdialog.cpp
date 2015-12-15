@@ -13,10 +13,10 @@ editcomputerdialog::editcomputerdialog(QWidget *parent) :
     ui->dateEdit->hide();
 }
 
-editcomputerdialog::~editcomputerdialog()
+/*editcomputerdialog::~editcomputerdialog()
 {
     delete ui;
-}
+}*/
 
 void editcomputerdialog::setInstance(Computer comp)
 {

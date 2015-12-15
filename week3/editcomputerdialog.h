@@ -16,7 +16,7 @@ class editcomputerdialog : public QDialog
 
 public:
     explicit editcomputerdialog(QWidget *parent = 0);
-    ~editcomputerdialog();
+    //~editcomputerdialog();
 
     void setInstance(Computer comp);
 

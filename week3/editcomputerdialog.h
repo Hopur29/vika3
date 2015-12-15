@@ -6,6 +6,10 @@
 
 #include <QDialog>
 
+/**
+ *edits the computers and checks for errors
+ */
+
 namespace Ui {
 class editcomputerdialog;
 }

@@ -7,6 +7,10 @@
 #include <QMessageBox>
 #include"editcomputerdialog.h"
 
+/**
+ * displays three tabs with information about all scientists, computers and relations.
+ */
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)

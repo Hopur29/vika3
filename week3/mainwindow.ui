@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Scientists">
      <attribute name="title">
@@ -231,7 +231,7 @@
      <attribute name="title">
       <string>Relations</string>
      </attribute>
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="Search_relation">
       <property name="geometry">
        <rect>
         <x>20</x>

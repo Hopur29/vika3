@@ -232,9 +232,17 @@ void MainWindow::on_addRelation_clicked()
     newRel.setModal(true);
     int result = newRel.exec();
 
-    if(result == 1)
+    if(result == 2)
     {
         //displayRelation();
     }
 
+}
+
+void MainWindow::on_Search_relation_textChanged(const QString &arg1)
+{
+        std::string userInput = arg1.toStdString();
+
+        std::vector<Scientist> sci = sciServ.searchForScientists(userInput);
+        displayScientists(sci);
 }

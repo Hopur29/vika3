@@ -77,3 +77,5 @@ void editcomputerdialog::on_checkBox_toggled(bool checked)
             ui->dateEdit->hide();
         }
 }
+
+

@@ -20,6 +20,8 @@ public:
 private slots:
     void on_addOK_accepted();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::adnewcomputerdialog *ui;
 

@@ -49,6 +49,10 @@ private slots:
 
     void on_addRelation_clicked();
 
+    void on_lineEdit_3_textChanged(const QString &arg1);
+
+    void on_Search_relation_textChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     void displayScientists();

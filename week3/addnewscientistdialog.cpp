@@ -25,14 +25,14 @@ void AddNewScientistDialog::on_buttonBox_accepted()
 
     if(name.isEmpty())
     {
-
+       QMessageBox::information(this,tr("Error"), tr("Scientists must have a name."));
     }
-    if(bday.isEmpty())
+    else if(bday.isEmpty())
     {
-        //do something
+        QMessageBox::information(this,tr("Error"), tr("Scientists must have a birthday."));
     }   
 
-    if(ui->set_deathYear->isHidden())
+    else if(ui->set_deathYear->isHidden())
     {
         if(sciServ.addScientist(Scientist(name.toStdString(), utils::intToSex(sex), bday.toUInt())))
         {

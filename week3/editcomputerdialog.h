@@ -26,6 +26,8 @@ private slots:
 
     void on_checkBox_toggled(bool checked);
 
+    void on_buttonBox_destroyed();
+
 private:
     Ui::editcomputerdialog *ui;
     ComputerService compServ;

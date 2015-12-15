@@ -64,6 +64,7 @@ void editcomputerdialog::on_buttonBox_accepted()
         }
 
     }
+
 }
 
 void editcomputerdialog::on_checkBox_toggled(bool checked)

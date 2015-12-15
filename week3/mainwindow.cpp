@@ -195,10 +195,11 @@ void MainWindow::on_Computer_edit_clicked()
     edit.setModal(true);
     int result = edit.exec();
 
-    if(result == 1)
-    {
+
+
+
         displayComputers();
-    }
+
 }
 
 void MainWindow::on_removeComputer_clicked()
@@ -231,8 +232,7 @@ void MainWindow::displayRelations()
     std::vector<Relation> rel = linkServ.getAllRelation();
     displayRelations(rel);
 
-            //std::vector<Computer> vec = comServ.getAllComputers("name",true);
-    //displayComputers(vec);
+
 }
 
 void MainWindow::displayRelations(std::vector<Relation> vec)
@@ -259,10 +259,12 @@ void MainWindow::on_addRelation_clicked()
     newRel.setModal(true);
     int result = newRel.exec();
 
-    if(result == 2)
-    {
-        displayRelations();
-    }
+
+
+    displayRelations();
+
+
+
 
 }
 

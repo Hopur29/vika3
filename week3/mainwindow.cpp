@@ -217,3 +217,16 @@ void MainWindow::on_SearchComputer_textChanged(const QString &arg1)
     std::vector<Computer> com = comServ.searchForComputers(userInput);
     displayComputers(com);
 }
+
+void MainWindow::on_addRelation_clicked()
+{
+    addNewRelationDialog newRel;
+    newRel.setModal(true);
+    int result = newRel.exec();
+
+    if(result == 1)
+    {
+        //displayRelation();
+    }
+
+}

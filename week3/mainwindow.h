@@ -5,6 +5,7 @@
 #include "services/scientistservice.h"
 #include "addnewscientistdialog.h"
 #include "adnewcomputerdialog.h"
+#include "addnewrelationdialog.h"
 #include "editscientistdialog.h"
 #include <QMainWindow>
 #include <QTableWidget>
@@ -45,6 +46,8 @@ private slots:
     //void on_SearchComputer_textChanged(const QString &arg1);
 
     void on_SearchComputer_textChanged(const QString &arg1);
+
+    void on_addRelation_clicked();
 
 private:
     Ui::MainWindow *ui;

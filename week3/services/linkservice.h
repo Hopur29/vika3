@@ -1,7 +1,9 @@
 #ifndef LINKSERVICE_H
 #define LINKSERVICE_H
 
+
 #include "repositories/linkrepository.h"
+#include "models/relation.h"
 
 /**
  * @brief The LinkService acts as a middle layer between the UI and Data layers
@@ -19,7 +21,7 @@ public:
      * @return true if it was a success, false if it was a failure
      */
     bool addLink(std::string scientistId, std::string computerId);
-    void getAllRelation();
+    std::vector<Relation> getAllRelation();
 private:
     LinkRepository linkRepo;
 };

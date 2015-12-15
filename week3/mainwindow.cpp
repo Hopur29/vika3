@@ -6,6 +6,7 @@
 #include "models/computer.h"
 #include <QMessageBox>
 #include"editcomputerdialog.h"
+#include "models/relation.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -94,7 +95,7 @@ void MainWindow::on_tab_tabBarClicked(int index)
     }
     else if(index == 2)
     {
-        //displayRelations();
+        displayRelations();
     }
 }
 
@@ -220,11 +221,33 @@ void MainWindow::on_SearchComputer_textChanged(const QString &arg1)
     displayComputers(com);
 }
 
-/*void MainWindow::displayRelations()
+
+void MainWindow::displayRelations()
+{
+    std::vector<Relation> rel = linkServ.getAllRelation();
+    displayRelations(rel);
+
+            //std::vector<Computer> vec = comServ.getAllComputers("name",true);
+    //displayComputers(vec);
+}
+
+void MainWindow::displayRelations(std::vector<Relation> vec)
 {
     ui->Relation_table->clearContents();
-    ui->Relation_tab
-}*/
+    ui->Relation_table->setRowCount(vec.size());
+
+    for(unsigned int i = 0; i < vec.size(); i++)
+    {
+        Relation currentRelation = vec.at(i);
+
+        ui->Relation_table->setItem(i,0,new QTableWidgetItem(QString::number(currentRelation.getScientistId())));
+        ui->Relation_table->setItem(i,1,new QTableWidgetItem(QString::fromStdString(currentRelation.getScientistName())));
+        ui->Relation_table->setItem(i,2,new QTableWidgetItem(QString::number(currentRelation.getComputerId())));
+        ui->Relation_table->setItem(i,3,new QTableWidgetItem(QString::fromStdString(currentRelation.getComputerName())));
+
+    }
+}
+
 
 void MainWindow::on_addRelation_clicked()
 {
@@ -234,7 +257,7 @@ void MainWindow::on_addRelation_clicked()
 
     if(result == 2)
     {
-        //displayRelation();
+        displayRelations();
     }
 
 }

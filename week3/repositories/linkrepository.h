@@ -4,6 +4,7 @@
 #include <QtSql>
 #include <vector>
 #include <string>
+#include "models/relation.h"
 
 /**
  * @brief The LinkRepository handles connections between scientists and computers in the database
@@ -22,8 +23,12 @@ public:
      */
     bool addLink(std::string scientistId, std::string computerId);
 
+    std::vector<Relation> getAllRelation();
+
 private:
     QSqlDatabase db;
+
+    std::vector<Relation> queryRelations(QString sqlQuery);
 };
 
 #endif // LINKREPOSITORY_H

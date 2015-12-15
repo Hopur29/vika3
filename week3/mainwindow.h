@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 #include <vector>
 #include "models/scientist.h"
+#include "models/relation.h"
 #include "services/scientistservice.h"
 #include "addnewscientistdialog.h"
 #include "adnewcomputerdialog.h"
@@ -60,8 +61,11 @@ private:
     void displayComputers();
     void displayComputers(std::vector<Computer> vec);
     void displayRelations();
+    void displayRelations(std::vector<Relation> vec);
     ScientistService sciServ;
     ComputerService comServ;
+    LinkService linkServ;
+    std::vector<Relation> currentlyDisplayedRelation;
     std::vector<Scientist> currentlyDisplayedScientist;
     std::vector<Computer> currentlyDisplayedComputer;
 };

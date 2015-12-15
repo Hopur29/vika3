@@ -39,3 +39,56 @@ bool LinkRepository::addLink(string scientistId, string computerId)
     return true;
 }
 
+std::vector<Relation> LinkRepository::getAllRelation()
+{
+    stringstream sqlQuery;
+    sqlQuery << "SELECT scientistId, s.name sname, computerId, c.name cname from Computers c, Scientists s, ScientistComputerConnections r where r.scientistId = s.id and r.computerId = c.id" ;
+
+    return queryRelations(QString::fromStdString(sqlQuery.str()));
+
+
+}
+
+std::vector<Relation> LinkRepository::queryRelations(QString sqlQuery)
+{
+    vector<Relation> relations;
+
+    db.open();
+
+    if(!db.isOpen())
+    {
+        return relations;
+    }
+
+    QSqlQuery query(db);
+
+    if(!query.exec(sqlQuery))
+    {
+        return relations;
+    }
+
+    while(query.next())
+    {
+        int sId = query.value("scientistId").toUInt();
+        string sName = query.value("sname").toString().toStdString();
+        int cId = query.value("computerId").toUInt();
+        string cName = query.value("cname").toString().toStdString();
+
+        relations.push_back(Relation(sId,sName,cId,cName));
+    }
+
+    db.close();
+
+    /*for(unsigned int = 0; i < relations.size(); i++)
+    {
+        Relation currentRelation = relations.at(i);
+
+    }*/
+
+    return relations;
+
+
+}
+
+
+

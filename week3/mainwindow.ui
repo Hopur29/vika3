@@ -293,7 +293,7 @@
       </column>
       <column>
        <property name="text">
-        <string>Computer_id</string>
+        <string>Computer_name</string>
        </property>
       </column>
      </widget>

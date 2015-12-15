@@ -13,3 +13,8 @@ bool LinkService::addLink(string scientistId, string computerId)
 {
     return linkRepo.addLink(scientistId, computerId);
 }
+
+std::vector<Relation> LinkService::getAllRelation()
+{
+    return linkRepo.getAllRelation();
+}

@@ -290,6 +290,6 @@ void MainWindow::on_RemoveRelation_clicked()
     }
     else
     {
-        QMessageBox::information(this,tr("Error"), tr("We were not able to remove this scientist, sorry"));
+        QMessageBox::information(this,tr("Error"), tr("We were not able to remove this relation, sorry"));
     }
 }

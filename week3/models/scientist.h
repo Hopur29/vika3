@@ -14,6 +14,9 @@ class Computer;
 enum sexType {
     female,
     male
+    /* We did not take into account temporary mixed states of sexType
+        like trans People */
+
 };
 
 class Scientist

@@ -11,6 +11,9 @@
  * @brief The data model for computers
  */
 
+/* In the history of computers some computers were both mechanical and elictrical
+    others refer to such combinations. */
+
 enum computerType {
     electronic,
     mechatronic,

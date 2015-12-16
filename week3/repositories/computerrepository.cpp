@@ -144,6 +144,7 @@ std::vector<Scientist> ComputerRepository::queryScientistsByComputer(Computer co
 
     return scientists;
 }
+
 bool ComputerRepository::editComputer(Computer computer, int id)
 {
     db.open();

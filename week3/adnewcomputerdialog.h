@@ -23,6 +23,7 @@ public:
 
 private slots:
     void on_addOK_accepted();
+    // The form for adding new computer to the database is opend if a push button Add is pressed.
 
     void on_pushButton_clicked();
 

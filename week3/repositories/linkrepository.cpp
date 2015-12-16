@@ -89,6 +89,7 @@ std::vector<Relation> LinkRepository::queryRelations(QString sqlQuery)
 
 
 }
+
 bool LinkRepository::removeLink(string scientistId, string computerId)
 {
     db.open();

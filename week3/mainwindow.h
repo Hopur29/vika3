@@ -11,6 +11,10 @@
 #include <QMainWindow>
 #include <QTableWidget>
 
+/*This main window shows the current state of the database and includes to options for updating it
+  with add, edit and delete */
+
+
 namespace Ui {
 class MainWindow;
 }
@@ -36,15 +40,9 @@ private slots:
 
     void on_removeScientist_clicked();
 
-
-
-    //void on_pushButton_clicked();
-
     void on_Computer_edit_clicked();
 
     void on_removeComputer_clicked();
-
-    //void on_SearchComputer_textChanged(const QString &arg1);
 
     void on_SearchComputer_textChanged(const QString &arg1);
 

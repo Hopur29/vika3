@@ -34,7 +34,9 @@ public:
      * @return true if it was a success, false if it was a failure
      */
     bool addComputer(Computer computer);
+
     bool editComputer(Computer computer, int id);
+
     bool removeComputer(Computer computer);
 
 private:

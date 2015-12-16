@@ -17,12 +17,12 @@ public:
     ~EditScientistDialog();
 
     void setInstance(Scientist sci);
+
 private slots:
     void on_buttonBox_accepted();
 
     void on_checkBox_toggled(bool checked);
-
-    //void on_Name_Edit_cursorPositionChanged(int arg1, int arg2);
+    //If scientist is dead this checkBox must be toggled, otherwise his deathyear bocomes null
 
 private:
     Ui::EditScientistDialog *ui;

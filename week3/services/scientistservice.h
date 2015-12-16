@@ -35,7 +35,9 @@ public:
     bool addScientist(Scientist scientist);
 
     bool editScientist(Scientist scientist, int id);
+
     bool removeScientist(Scientist scientist);
+
 private:
     ScientistRepository scientistRepo;
 };

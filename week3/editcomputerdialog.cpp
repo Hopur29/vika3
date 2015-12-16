@@ -37,6 +37,7 @@ void editcomputerdialog::setInstance(Computer comp)
        }
 
 }
+
 void editcomputerdialog::on_buttonBox_accepted()
 {
     QString name = ui->comp_name_edit->text();

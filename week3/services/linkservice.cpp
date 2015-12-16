@@ -18,3 +18,7 @@ std::vector<Relation> LinkService::getAllRelation()
 {
     return linkRepo.getAllRelation();
 }
+std::vector<Relation> LinkService::removeRelation()
+{
+    return linkRepo.removeLink();
+}

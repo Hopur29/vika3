@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Scientists">
      <attribute name="title">
@@ -241,7 +241,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_5">
+     <widget class="QPushButton" name="RemoveRelation">
       <property name="geometry">
        <rect>
         <x>120</x>

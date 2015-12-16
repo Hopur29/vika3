@@ -275,3 +275,21 @@ void MainWindow::on_Search_relation_textChanged(const QString &arg1)
         std::vector<Scientist> sci = sciServ.searchForScientists(userInput);
         displayScientists(sci);
 }
+
+
+
+void MainWindow::on_RemoveRelation_clicked()
+{
+    int currentlySelectedRelatioinIndex = ui->Relation_table->currentIndex().row();
+
+    Relation rel = currentlyDisplayedRelation.at(currentlySelectedRelatioinIndex);
+
+    if(linkServ.removeRelation(rel))
+    {
+        displayComputers();
+    }
+    else
+    {
+        QMessageBox::information(this,tr("Error"), tr("We were not able to remove this scientist, sorry"));
+    }
+}

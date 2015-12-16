@@ -22,6 +22,7 @@ public:
      */
     bool addLink(std::string scientistId, std::string computerId);
     std::vector<Relation> getAllRelation();
+    std::vector<Relation> removeRelation();
 private:
     LinkRepository linkRepo;
 };
